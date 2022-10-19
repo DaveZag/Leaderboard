@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeaderBoard</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <div class="container">
+      <header class="main-header"><h1 class="title">Leaderboard</h1></header>
+      <main>
+        <!-- ================ Display section ================ -->
+        <section class="display">
+          <header class="display-header">
+            <h2 class="display-title">Recent scores</h2>
+            <button class="refresh-btn">Refresh</button>
+          </header>
+
+          <ul class="list"></ul>
+        </section>
+        <section class="form-cont">
+          <form action="" method="POST">
+            <header><h2 class="form-header"></h2></header>
+            <input type="text" name="name" id="name" required />
+            <input type="number" name="score" id="score" required />
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
