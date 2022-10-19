@@ -3,9 +3,8 @@ import { displayAll } from './display.js';
 const displayError = document.querySelector('.error');
 
 const createGame = async () => {
-  const url =
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
-  const response = await fetch(url, {
+  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
+  await fetch(url, {
     method: 'POST',
     headers: {
       'content-Type': 'application/json',
@@ -15,8 +14,7 @@ const createGame = async () => {
 };
 
 const getData = async () => {
-  const url =
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a7h3NjP2qu53OCSBUBrN/scores/';
+  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a7h3NjP2qu53OCSBUBrN/scores/';
   const response = await fetch(url);
   const data = await response.json();
   const resultArr = data.result;
@@ -33,3 +31,4 @@ getData().catch(() => {
 });
 
 export default getData;
+export { createGame };
