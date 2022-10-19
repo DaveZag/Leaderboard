@@ -4,26 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>LeaderBoard</title>
   <script defer src="main.js"></script></head>
   <body>
-    <div class="container">
+    <div class="container flex flex-center flex-col">
       <header class="main-header"><h1 class="title">Leaderboard</h1></header>
-      <main>
+      <main class="flex flex-jc-c">
         <!-- ================ Display section ================ -->
+
         <section class="display">
-          <header class="display-header">
+          <header class="display-header flex">
             <h2 class="display-title">Recent scores</h2>
-            <button class="refresh-btn">Refresh</button>
+            <button type="button" class="refresh-btn">Refresh</button>
           </header>
 
-          <ul class="list"></ul>
+          <div class="list-cont">
+            <p class="error">
+              A problem occured when fechting data. Please try again later...
+            </p>
+            <ul class="list"></ul>
+          </div>
         </section>
+
+        <!-- ================ Form section ================ -->
+
         <section class="form-cont">
-          <form action="" method="POST">
-            <header><h2 class="form-header"></h2></header>
-            <input type="text" name="name" id="name" required />
-            <input type="number" name="score" id="score" required />
+          <header><h2 class="form-header">Add your score</h2></header>
+          <form action="none" method="POST" class="flex flex-center flex-col">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
+            <input
+              type="text"
+              name="score"
+              id="score"
+              placeholder="Enter your score"
+            />
+            <p class="error-form">Please add a name and a score.</p>
             <button type="submit" class="submit-btn">Submit</button>
           </form>
         </section>

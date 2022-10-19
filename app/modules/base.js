@@ -1,15 +1,13 @@
 import addLeader from './utils/add_leader.js';
-import { displayAll } from './utils/display.js';
+import getData from './utils/api.js';
 
-function base() {
+const base = () => {
   const submitBtn = document.querySelector('.submit-btn');
   const refreshBtn = document.querySelector('.refresh-btn');
   const name = document.querySelector('#name');
   const score = document.querySelector('#score');
   const error = document.querySelector('.error-form');
-  const displayError = document.querySelector('.error');
   const form = document.querySelector('form');
-  let leaders = JSON.parse(localStorage.getItem('leaders'));
   const list = document.querySelector('.list');
   const regex = /^[0-9]+$/;
 
@@ -41,25 +39,10 @@ function base() {
 
   refreshBtn.addEventListener('click', () => {
     list.innerHTML = '';
-    leaders = JSON.parse(localStorage.getItem('leaders'));
-
-    if (leaders) {
-      displayError.style.display = 'none';
-    } else {
-      displayError.style.display = 'block';
-    }
     setTimeout(() => {
-      displayAll(leaders);
+      getData();
     }, 250);
   });
-
-  document.addEventListener('DOMContentLoaded', () => {
-    if (leaders) {
-      displayAll(leaders);
-    } else {
-      displayError.style.display = 'block';
-    }
-  });
-}
+};
 
 export default base;

@@ -1,9 +1,9 @@
 import Leader from './leader.js';
-import saveToLocal from './save_local.js';
+import saveData from './save_toAPI.js';
 
-function addLeader(name, score) {
+const addLeader = (name, score) => {
   const leader = new Leader(name, score);
-  saveToLocal(leader);
-}
+  saveData(leader);
+};
 
 export default addLeader;
