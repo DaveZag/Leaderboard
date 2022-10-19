@@ -3,7 +3,7 @@ const list = document.querySelector('.list');
 const display = (leader) => {
   const li = document.createElement('li');
   li.classList.add('leader');
-  li.innerText = `${leader.name} : ${leader.score}`;
+  li.innerText = `${leader.user} : ${leader.score}`;
   list.appendChild(li);
 };
 
