@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/bc94a42a6b.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +18,10 @@
   <script defer src="main.js"></script></head>
   <body>
     <div class="container flex flex-center flex-col">
-      <header class="main-header"><h1 class="title">Leaderboard</h1></header>
+      <header class="main-header flex">
+        <h1 class="title">Leaderboard</h1>
+        <i class="fa-solid fa-ranking-star icon-lead"></i>
+      </header>
       <main class="flex flex-jc-c">
         <!-- ================ Display section ================ -->
 
@@ -24,11 +31,21 @@
             <button type="button" class="refresh-btn">Refresh</button>
           </header>
 
-          <div class="list-cont">
+          <div>
             <p class="error">
               A problem occured when fechting data. Please try again later...
             </p>
-            <ul class="list"></ul>
+          </div>
+
+          <div class="loading">Loading...</div>
+
+          <div class="list-cont">
+            <table class="list">
+              <tr class="table-header">
+                <th>Name</th>
+                <th>Score</th>
+              </tr>
+            </table>
           </div>
         </section>
 
@@ -55,5 +72,10 @@
         </section>
       </main>
     </div>
+    <footer class="flex flex-center">
+      <div class="footer-text flex flex-center">
+        Copyrigth&copy; <span id="date"> </span> Dave Zagabe
+      </div>
+    </footer>
   </body>
 </html>

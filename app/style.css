@@ -146,6 +146,8 @@ td {
 
 .main-header {
   margin-top: 2rem;
+  margin-left: 11.5%;
+  align-self: flex-start;
 }
 
 .icon-lead {
@@ -291,7 +293,6 @@ footer {
 
   .main-header {
     margin: 3rem auto;
-    justify-content: center;
   }
 
   footer {

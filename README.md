@@ -56,7 +56,12 @@ Open the directory in visual studio code by typing the following command in Git 
 code .
 ```
 
-Then using the live server of VS Code you can open the index.html file in the dist folder.
+To install all the dependencies and start the program, use the following commands:
+
+```
+npm install
+npm start
+```
 
 ## Repo Links
 
