@@ -260,6 +260,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  :root {
+    --padd: 0 2%;
+  }
+
   body {
     height: 100%;
     overflow-y: scroll;
@@ -276,15 +280,23 @@ footer {
   .container {
     display: block;
     height: 100%;
+    padding: var(--padd);
   }
 
   main {
     flex-direction: column;
     margin-bottom: 2rem;
+    padding: var(--padd);
   }
 
   .main-header {
     margin: 3rem auto;
     justify-content: center;
+  }
+
+  footer {
+    height: 4rem;
+    position: static;
+    padding: var(--padd);
   }
 }

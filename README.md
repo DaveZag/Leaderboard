@@ -18,7 +18,15 @@
 
 ## Screenshot
 
-![Preview](./preview/preview.png)
+### Desktop
+
+![Preview](./preview/preview-desk.png)
+
+### Mobile
+
+<p align = "center">
+<img  src="./preview/preview-mob.png" alt="Mobile preview"/>
+</p>
 
 ## Getting Started
 
@@ -49,15 +57,6 @@ code .
 ```
 
 Then using the live server of VS Code you can open the index.html file in the dist folder.
-
-### Testing
-
-This project contains some function tests. To run them, you first need to install [node.js](https://nodejs.org/en/download/). Then open the copy of this project that you cloned either in VScode or command prompt.<br>
-Finally, run the following command in the CLI(Terminal).
-
-```
-npm test
-```
 
 ## Repo Links
 
