@@ -9,6 +9,8 @@ const base = () => {
   const error = document.querySelector('.error-form');
   const form = document.querySelector('form');
   const list = document.querySelector('.list');
+  const tHeader = document.querySelector('.table-header');
+  const date = document.querySelector('#date');
   const regex = /^[0-9]+$/;
 
   // Prevent form default behavior
@@ -16,6 +18,10 @@ const base = () => {
     e.preventDefault();
   };
 
+  // return date to footer
+  date.innerHTML = new Date().getFullYear();
+
+  // submit form
   submitBtn.addEventListener('click', (e) => {
     if (name.value && score.value) {
       if (regex.test(score.value)) {
@@ -23,6 +29,8 @@ const base = () => {
         const scoreTrimed = score.value.trim();
 
         addLeader(nameTrimed, scoreTrimed);
+        name.value = '';
+        score.value = '';
       } else {
         error.innerText = 'Score should be a number.';
         error.style.display = 'block';
@@ -34,14 +42,20 @@ const base = () => {
 
     setTimeout(() => {
       error.style.display = 'none';
-    }, 7000);
+    }, 6000);
   });
 
   refreshBtn.addEventListener('click', () => {
-    list.innerHTML = '';
+    list.innerHTML = `${tHeader.innerHTML}
+    `;
+    document.querySelector('.loading').style.display = 'block';
     setTimeout(() => {
       getData();
-    }, 250);
+    }, 350);
+
+    setTimeout(() => {
+      document.querySelector('.loading').style.display = 'none';
+    }, 650);
   });
 };
 
