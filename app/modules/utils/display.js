@@ -1,10 +1,11 @@
-const list = document.querySelector('.list');
+const table = document.querySelector('.list');
 
 const display = (leader) => {
-  const li = document.createElement('li');
-  li.classList.add('leader');
-  li.innerText = `${leader.user} : ${leader.score}`;
-  list.appendChild(li);
+  const tr = document.createElement('tr');
+  tr.classList.add('leader');
+  tr.innerHTML = ` <td>${leader.user} :</td> 
+                    <td>${leader.score}</td>`;
+  table.appendChild(tr);
 };
 
 const displayAll = (leaders) => {
