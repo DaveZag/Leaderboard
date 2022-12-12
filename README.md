@@ -9,7 +9,7 @@
 - HTML
 - CSS
 - Javascript
-- Node.js (npm) & Webpack.
+- Node.js(npm) & Webpack.
 - Jest(for testing).
 
 ## Live Demo (if available)
