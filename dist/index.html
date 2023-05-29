@@ -15,11 +15,12 @@
       rel="stylesheet"
     />
     <title>LeaderBoard</title>
-  <script defer src="main.js"></script></head>
+    <script defer src="main.js"></script>
+  </head>
   <body>
     <div class="container flex flex-center flex-col">
       <header class="main-header flex">
-        <h1 class="title">Leaderboard</h1>
+        <h1 class="title">LeaderBoard</h1>
         <i class="fa-solid fa-ranking-star icon-lead"></i>
       </header>
       <main class="flex flex-jc-c">
@@ -31,11 +32,9 @@
             <button type="button" class="refresh-btn">Refresh</button>
           </header>
 
-          <div>
-            <p class="error">
-              A problem occured when fechting data. Please try again later...
-            </p>
-          </div>
+          <p class="error">
+            A problem occurred when fetching data. Please try again later...
+          </p>
 
           <div class="loading">Loading...</div>
 
@@ -52,7 +51,7 @@
         <!-- ================ Form section ================ -->
 
         <section class="form-cont">
-          <header><h2 class="form-header">Add your score</h2></header>
+          <h2 class="form-header">Add your score</h2>
           <form action="none" method="POST" class="flex flex-center flex-col">
             <input
               type="text"
@@ -74,7 +73,7 @@
     </div>
     <footer class="flex flex-center">
       <div class="footer-text flex flex-center">
-        Copyrigth&copy; <span id="date"> </span> Dave Zagabe
+        Copyright&copy; <span id="date"> </span> Dave Zagabe
       </div>
     </footer>
   </body>
